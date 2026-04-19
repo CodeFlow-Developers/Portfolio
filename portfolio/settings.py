@@ -29,7 +29,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = os.getenv('DEBUG') == 'True'
 # SECURITY WARNING: don't run with debug turned on in production!
 
-ALLOWED_HOSTS = ['codeflow-developers-portfolio.onrender.com']
+ALLOWED_HOSTS = ['codeflow-developers-portfolio.onrender.com','127.0.0.1','localhost']
 
 
 # Application definition
@@ -80,6 +80,14 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'portfolio.wsgi.application'
 
+STORAGES = {
+    "default": {
+        "BACKEND": "cloudinary_storage.storage.MediaCloudinaryStorage",
+    },
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+    },
+}
 
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
