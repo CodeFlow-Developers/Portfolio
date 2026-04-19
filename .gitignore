@@ -1,0 +1,18 @@
+# Virtual environment
+venv/
+soham/
+
+# Environment variables
+.env
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Media uploads
+media/
+
+# OS files
+.DS_Store
+Thumbs.db

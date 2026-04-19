@@ -1,0 +1,15 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'main/home.css' %}">
+<link rel="stylesheet" href="{% static 'services/services_section.css' %}">
+{% endblock %}
+
+{% block content %}
+    {% include 'main/sections/hero.html' %}
+    {% include 'services/services_section.html' %}
+    {% include 'main/sections/techstack.html' %}
+    {% include 'main/sections/team.html' %}
+    {% include 'main/sections/contact_cta.html' %}
+{% endblock %}

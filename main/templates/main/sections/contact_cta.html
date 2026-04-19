@@ -1,0 +1,17 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'main/contact_cta.css' %}">
+
+<section class="cta-section" id="contact-cta">
+    <div class="container">
+        <div class="cta-box">
+            <div class="cta-glow"></div>
+            <span class="section-tag">Let's Work Together</span>
+            <h2>Ready to build something <span>great?</span></h2>
+            <p>Have a project in mind? Let's turn your idea into a real, working product.</p>
+            <div class="cta-buttons">
+                <a href="{% url 'contact' %}" class="btn-primary-cta">Start a Project</a>
+                <a href="{% url 'projects' %}" class="btn-outline-cta">See Our Work</a>
+            </div>
+        </div>
+    </div>
+</section>

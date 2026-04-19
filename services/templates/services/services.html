@@ -1,0 +1,140 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'services/services.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+    <div class="hero-bg-glow"></div>
+    <div class="floating-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+    <div class="container">
+        <div class="page-hero-content">
+            <span class="section-tag">What We Offer</span>
+            <h1>Our <span>Services</span></h1>
+            <p>End-to-end web development — from database to deployment.</p>
+        </div>
+    </div>
+</section>
+
+<!-- SERVICES GRID -->
+<section class="services-full">
+    <div class="container">
+        <div class="services-grid">
+
+            <div class="service-card">
+                <div class="service-icon"><i class="bi bi-server"></i></div>
+                <h3>Backend Development</h3>
+                <p>Robust server-side logic built with Python and Django. REST APIs, authentication, admin panels, and database architecture.</p>
+                <ul class="service-list">
+                    <li><i class="bi bi-check-circle-fill"></i> Django & Python</li>
+                    <li><i class="bi bi-check-circle-fill"></i> REST API Design</li>
+                    <li><i class="bi bi-check-circle-fill"></i> User Authentication</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Admin Dashboards</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"><i class="bi bi-layout-text-window"></i></div>
+                <h3>Frontend Development</h3>
+                <p>Clean, responsive interfaces built with HTML, CSS, JavaScript and Bootstrap. Pixel-perfect on every screen size.</p>
+                <ul class="service-list">
+                    <li><i class="bi bi-check-circle-fill"></i> HTML5 & CSS3</li>
+                    <li><i class="bi bi-check-circle-fill"></i> JavaScript</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Bootstrap</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Fully Responsive</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"><i class="bi bi-database"></i></div>
+                <h3>Database Design</h3>
+                <p>Structured, scalable database architecture using MySQL. Proper relationships, migrations, and query optimization.</p>
+                <ul class="service-list">
+                    <li><i class="bi bi-check-circle-fill"></i> MySQL</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Schema Design</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Django ORM</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Data Migrations</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"><i class="bi bi-cloud-upload"></i></div>
+                <h3>Deployment</h3>
+                <p>Full production deployment on Render, Railway, and Vercel. Environment config, static files, and domain setup handled.</p>
+                <ul class="service-list">
+                    <li><i class="bi bi-check-circle-fill"></i> Render & Railway</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Vercel</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Environment Config</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Live URL Setup</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"><i class="bi bi-cart4"></i></div>
+                <h3>E-Commerce</h3>
+                <p>Custom online stores with product management, cart, checkout flow, and order tracking — no third-party platforms needed.</p>
+                <ul class="service-list">
+                    <li><i class="bi bi-check-circle-fill"></i> Product Management</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Cart & Checkout</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Order Tracking</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Custom Admin</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"><i class="bi bi-git"></i></div>
+                <h3>Version Control & Handoff</h3>
+                <p>Clean GitHub repositories with proper structure, README documentation, and full code handoff so you own everything.</p>
+                <ul class="service-list">
+                    <li><i class="bi bi-check-circle-fill"></i> GitHub Repo</li>
+                    <li><i class="bi bi-check-circle-fill"></i> README Docs</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Clean Codebase</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Full Ownership</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- PROCESS SECTION -->
+<section class="process-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">How We Work</span>
+            <h2>Our <span>Process</span></h2>
+            <p>Simple, transparent, and focused on delivery.</p>
+        </div>
+        <div class="process-grid">
+            <div class="process-step">
+                <div class="step-number">01</div>
+                <h3>Discovery</h3>
+                <p>We understand your requirements, goals, and scope before writing a single line of code.</p>
+            </div>
+            <div class="process-arrow"><i class="bi bi-arrow-right"></i></div>
+            <div class="process-step">
+                <div class="step-number">02</div>
+                <h3>Build</h3>
+                <p>We develop backend, frontend, and database in parallel — keeping you updated throughout.</p>
+            </div>
+            <div class="process-arrow"><i class="bi bi-arrow-right"></i></div>
+            <div class="process-step">
+                <div class="step-number">03</div>
+                <h3>Deploy</h3>
+                <p>We deploy to production, configure your domain, and hand over the full codebase.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% include 'main/sections/contact_cta.html' %}
+
+{% endblock %}

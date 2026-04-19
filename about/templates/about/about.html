@@ -1,0 +1,77 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'about/about.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+    <div class="hero-bg-glow"></div>
+    <div class="floating-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+    <div class="container">
+        <div class="page-hero-content">
+            <span class="section-tag">Who We Are</span>
+            <h1>About <span>CodeFlow</span></h1>
+            <p>Two developers building real, production-ready web products.</p>
+            <div class="hero-badges">
+                <div class="badge"><i class="bi bi-code-slash"></i> Full-Stack</div>
+                <div class="badge"><i class="bi bi-cloud-check"></i> Deployed</div>
+                <div class="badge"><i class="bi bi-lightning-charge"></i> Production Ready</div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ABOUT INTRO -->
+<section class="about-intro">
+    <div class="container">
+        <div class="intro-grid">
+            <div class="intro-text">
+                <h2>We build products, <span>not just websites</span></h2>
+                <p>CodeFlow Developers is a two-person development team focused on building full-stack web applications that solve real problems. We handle everything from backend logic and databases to frontend design and deployment.</p>
+                <p>Every project we take on is treated like a product — with clean code, proper architecture, and attention to detail that makes it maintainable and scalable.</p>
+                <div class="intro-stats">
+                    <div class="stat">
+                        <h3>5+</h3>
+                        <span>Projects Built</span>
+                    </div>
+                    <div class="stat">
+                        <h3>2</h3>
+                        <span>Developers</span>
+                    </div>
+                    <div class="stat">
+                        <h3>100%</h3>
+                        <span>Custom Code</span>
+                    </div>
+                </div>
+            </div>
+            <div class="intro-card">
+                <div class="intro-card-inner">
+                    <i class="bi bi-code-square"></i>
+                    <h3>Our Approach</h3>
+                    <ul>
+                        <li><i class="bi bi-check-circle-fill"></i> Clean, maintainable code</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Full-stack ownership</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Deployed & production-ready</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Database-driven architecture</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Responsive on all devices</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TEAM SECTION (reuse) -->
+{% include 'main/sections/team.html' %}
+
+<!-- CTA -->
+{% include 'main/sections/contact_cta.html' %}
+
+{% endblock %}
