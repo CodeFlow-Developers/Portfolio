@@ -1,0 +1,224 @@
+/* ===== PAGE HERO (reuse about pattern) ===== */
+.page-hero {
+    position: relative;
+    padding: 140px 0 100px;
+    background: #0a0a0f;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero-bg-glow {
+    position: absolute;
+    top: -100px; left: 50%;
+    transform: translateX(-50%);
+    width: 700px; height: 500px;
+    background: radial-gradient(ellipse, rgba(139,92,246,0.18) 0%, transparent 65%);
+    pointer-events: none;
+    animation: glowPulse 4s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+    0%, 100% { opacity: 0.7; transform: translateX(-50%) scale(1); }
+    50%       { opacity: 1;   transform: translateX(-50%) scale(1.1); }
+}
+
+.floating-shapes { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+
+.shape {
+    position: absolute; border-radius: 50%;
+    opacity: 0.07; background: #8b5cf6;
+    animation: float 6s ease-in-out infinite;
+}
+.shape-1 { width: 300px; height: 300px; top: -80px; left: -60px; animation-delay: 0s; }
+.shape-2 { width: 200px; height: 200px; top: 40px; right: -40px; animation-delay: 2s; }
+.shape-3 { width: 150px; height: 150px; bottom: -40px; left: 30%; animation-delay: 4s; }
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50%       { transform: translateY(-20px) rotate(10deg); }
+}
+
+.page-hero-content { position: relative; z-index: 2; animation: fadeUp 0.8s ease forwards; }
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.section-tag {
+    display: inline-block;
+    background: rgba(139, 92, 246, 0.12);
+    color: #a855f7;
+    border: 1px solid rgba(139, 92, 246, 0.25);
+    padding: 4px 14px; border-radius: 50px;
+    font-size: 0.8rem; font-weight: 500;
+    letter-spacing: 0.05em; margin-bottom: 20px;
+}
+
+.page-hero h1 {
+    font-size: 3.5rem; font-weight: 800;
+    color: #ffffff; margin-bottom: 16px;
+    letter-spacing: -0.02em;
+}
+.page-hero h1 span { color: #8b5cf6; text-shadow: 0 0 40px rgba(139,92,246,0.5); }
+
+.page-hero p { color: #9ca3af; font-size: 1.15rem; max-width: 480px; margin: 0 auto; }
+
+.page-hero::after {
+    content: '';
+    position: absolute; bottom: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 100%; height: 1px;
+    background: linear-gradient(90deg,
+        transparent 0%, transparent 10%,
+        rgba(139,92,246,0.4) 25%, rgba(139,92,246,0.9) 45%,
+        rgba(139,92,246,1) 50%, rgba(139,92,246,0.9) 55%,
+        rgba(139,92,246,0.4) 75%, transparent 90%, transparent 100%);
+    box-shadow: 0 0 4px rgba(139,92,246,0.4), 0 0 10px rgba(139,92,246,0.6),
+                0 0 20px rgba(139,92,246,0.5), 0 0 35px rgba(139,92,246,0.3);
+}
+
+/* ===== SERVICES GRID ===== */
+.services-full {
+    padding: 100px 0;
+    background: #0d0d14;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.service-card {
+    background: #111827;
+    border: 1px solid rgba(139, 92, 246, 0.1);
+    border-radius: 16px;
+    padding: 36px 28px;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    border-color: rgba(139, 92, 246, 0.4);
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(139, 92, 246, 0.08);
+}
+
+.service-icon {
+    width: 56px; height: 56px;
+    background: rgba(139, 92, 246, 0.1);
+    border: 1px solid rgba(139, 92, 246, 0.2);
+    border-radius: 14px;
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 20px;
+}
+
+.service-icon i { font-size: 1.6rem; color: #8b5cf6; }
+
+.service-card h3 {
+    font-size: 1.1rem; font-weight: 700;
+    color: #ffffff; margin-bottom: 12px;
+}
+
+.service-card p {
+    color: #9ca3af; font-size: 0.9rem;
+    line-height: 1.75; margin-bottom: 20px;
+}
+
+.service-list {
+    list-style: none; padding: 0; margin: 0;
+    display: flex; flex-direction: column; gap: 10px;
+}
+
+.service-list li {
+    display: flex; align-items: center; gap: 10px;
+    color: #d1d5db; font-size: 0.88rem;
+}
+
+.service-list li i { color: #8b5cf6; font-size: 0.85rem; flex-shrink: 0; }
+
+/* ===== PROCESS SECTION ===== */
+.process-section {
+    position: relative;
+    padding: 100px 0;
+    background: #0a0a0f;
+}
+
+.process-section::before {
+    content: '';
+    position: absolute; top: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 100%; height: 1px;
+    background: linear-gradient(90deg,
+        transparent 0%, transparent 10%,
+        rgba(139,92,246,0.4) 25%, rgba(139,92,246,0.9) 45%,
+        rgba(139,92,246,1) 50%, rgba(139,92,246,0.9) 55%,
+        rgba(139,92,246,0.4) 75%, transparent 90%, transparent 100%);
+    box-shadow: 0 0 4px rgba(139,92,246,0.4), 0 0 10px rgba(139,92,246,0.6),
+                0 0 20px rgba(139,92,246,0.5), 0 0 35px rgba(139,92,246,0.3);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-header h2 {
+    font-size: 2.5rem; font-weight: 800;
+    color: #ffffff; margin-bottom: 12px;
+}
+
+.section-header h2 span { color: #8b5cf6; }
+.section-header p { color: #9ca3af; font-size: 1.05rem; }
+
+.process-grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.process-step {
+    background: #111827;
+    border: 1px solid rgba(139, 92, 246, 0.1);
+    border-radius: 16px;
+    padding: 36px 28px;
+    text-align: center;
+    flex: 1;
+    max-width: 280px;
+    transition: all 0.3s ease;
+}
+
+.process-step:hover {
+    border-color: rgba(139, 92, 246, 0.4);
+    transform: translateY(-5px);
+}
+
+.step-number {
+    font-size: 2.5rem; font-weight: 800;
+    color: rgba(139, 92, 246, 0.3);
+    margin-bottom: 16px;
+    line-height: 1;
+}
+
+.process-step h3 {
+    font-size: 1.1rem; font-weight: 700;
+    color: #ffffff; margin-bottom: 10px;
+}
+
+.process-step p { color: #9ca3af; font-size: 0.9rem; line-height: 1.7; }
+
+.process-arrow { color: rgba(139, 92, 246, 0.4); font-size: 1.5rem; flex-shrink: 0; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+    .services-grid { grid-template-columns: repeat(2, 1fr); }
+    .process-grid { flex-direction: column; }
+    .process-arrow { transform: rotate(90deg); }
+    .process-step { max-width: 100%; width: 100%; }
+}
+
+@media (max-width: 600px) {
+    .services-grid { grid-template-columns: 1fr; }
+    .page-hero h1 { font-size: 2.4rem; }
+}
