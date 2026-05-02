@@ -6,5 +6,5 @@ from .models import ContactMessage
 class ContactMessageAdmin(admin.ModelAdmin):
     list_display = ['name', 'email', 'subject', 'is_read', 'created_at']
     list_editable = ['is_read']
-    list_filter = ['is_read']
+    list_filter = ['is_read','created_at']
     readonly_fields = ['name', 'email', 'subject', 'message', 'created_at']
