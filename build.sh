@@ -5,4 +5,4 @@ pip install -r requirements.txt
 python manage.py collectstatic --no-input
 python manage.py migrate
 
-python manage.py shell -c "from django.contrib.auth import get_user_model; U = get_user_model(); U.objects.filter(username='admin').exists() or U.objects.create_superuser('admin', 'codeflowsolutions.dev@gmail.com', 'admin0204')"
+python manage.py shell -c "import os; from django.contrib.auth import get_user_model; U = get_user_model(); U.objects.filter(username=os.environ['DJANGO_SUPERUSER_USERNAME']).exists() or U.objects.create_superuser(os.environ['DJANGO_SUPERUSER_USERNAME'], os.environ['DJANGO_SUPERUSER_EMAIL'], os.environ['DJANGO_SUPERUSER_PASSWORD'])"
